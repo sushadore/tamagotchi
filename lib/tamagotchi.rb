@@ -1,4 +1,5 @@
 class Tamagotchi
+
   define_method(:initialize) do |name, food, rest, activity|
     @name = name
     @food = food
@@ -11,15 +12,15 @@ class Tamagotchi
   end
 
   def food_level
-    @food = 10
+    @food
   end
 
   def sleep_level
-    @sleep = 10
+    @sleep
   end
 
   def activity_level
-    @activity = 10
+    @activity
   end
 
   def is_alive?
@@ -28,7 +29,9 @@ class Tamagotchi
 
   def set_food_level
     @food = 0
-    # elsif @food <10 && @food >0
-    #   @food = @food - 1
+  end
+
+  def time_passes
+    @food -= 1
   end
 end
