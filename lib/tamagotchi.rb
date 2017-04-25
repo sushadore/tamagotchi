@@ -34,4 +34,12 @@ class Tamagotchi
   def time_passes
     @food -= 1
   end
+
+  def feed_pet
+    if @food < 10
+      @food += 1
+    else
+      "Your pet is already full! No obese tamagotchis!!"
+    end
+  end
 end
